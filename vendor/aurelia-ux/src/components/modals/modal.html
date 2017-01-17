@@ -1,0 +1,13 @@
+<template class="modal modal-in" style="display: block;">
+    <div class="modal-inner">
+        <div class="modal-title" if.bind="title">\$\{title\}</div>
+        <div class="modal-text" if.bind="text">\$\{text\}</div>
+    </div>
+    <div class="modal-buttons modal-buttons-\$\{buttons.length\}">
+        <span class="modal-button modal-button-bold"
+            repaet.for="btn of buttons"
+            click.trigger="$parent.__click__(btn, $event)">
+                \$\{btn.label\}
+        </span>
+    </div>
+</template>
